@@ -3,7 +3,7 @@ local b = game:GetService("Players")
 local c = b.LocalPlayer
 
 local d = Instance.new("ScreenGui")
-d.Name = ""
+d.Name = "W"
 d.Parent = c:WaitForChild("PlayerGui")
 
 local e = {}
@@ -87,3 +87,4 @@ end
 return {
     WNotify = Notify
 }
+
