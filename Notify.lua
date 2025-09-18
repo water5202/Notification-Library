@@ -11,7 +11,7 @@ local f = 10
 local g = 80
 local h = 250
 
-function i(j, k, l)
+function Notify(TITLE, TEXT, DURATION)
     local m = Instance.new("Frame")
     m.Size = UDim2.new(0, h, 0, g)
     m.AnchorPoint = Vector2.new(1, 1)
@@ -24,7 +24,7 @@ function i(j, k, l)
     n.Parent = m
 
     local o = Instance.new("TextLabel")
-    o.Text = j
+    o.Text = TITLE
     o.Font = Enum.Font.Nunito
     o.TextSize = 18
     o.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -35,7 +35,7 @@ function i(j, k, l)
     o.Parent = m
 
     local p = Instance.new("TextLabel")
-    p.Text = k
+    p.Text = TEXT
     p.Font = Enum.Font.Nunito
     p.TextSize = 16
     p.TextColor3 = Color3.fromRGB(200, 200, 200)
@@ -46,7 +46,7 @@ function i(j, k, l)
     p.Parent = m
 
     local q = Instance.new("TextLabel")
-    q.Text = "(" .. string.format("%.1f", l) .. ")"
+    q.Text = "(" .. string.format("%.1f", DURATION) .. ")"
     q.Font = Enum.Font.Nunito
     q.TextSize = 16
     q.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -64,8 +64,8 @@ function i(j, k, l)
 
     task.spawn(function()
         local u = tick()
-        while tick() - u < l do
-            local v = l - (tick() - u)
+        while tick() - u < DURATION do
+            local v = DURATION - (tick() - u)
             q.Text = "(" .. string.format("%.1f", v) .. ")"
             task.wait(0.1)
         end
@@ -83,3 +83,7 @@ function i(j, k, l)
         m:Destroy()
     end)
 end
+
+return {
+    WNotify = Notify
+}
