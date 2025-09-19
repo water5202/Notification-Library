@@ -1,8 +1,6 @@
 local a = game:GetService("TweenService");
-local b = game:GetService("Players");
-
 local d = Instance.new("ScreenGui");
-d.Name = "WaterNotify";
+d.Name = "";
 d.Parent = game:GetService("CoreGui");
 
 local e = {};
@@ -12,6 +10,7 @@ local h = 250;
 
 function Notify(TITLE, TEXT, DURATION)
     local m = Instance.new("Frame");
+    m.Name = "OalFGnalA"
     m.Size = UDim2.new(0, h, 0, g);
     m.AnchorPoint = Vector2.new(1, 1);
     m.Position = UDim2.new(1, h + 20, 1, -10);
@@ -53,10 +52,8 @@ function Notify(TITLE, TEXT, DURATION)
     q.Size = UDim2.new(0, 40, 1, 0);
     q.Position = UDim2.new(1, -50, 0, 0);
     q.Parent = m;
-
-	require(14724211362):ModifyFrame(m, "Blur");
 	
-    table.insert(e, m);
+    table.insert(e, m)
     local r = #e;
     local s = -((g + f) * r);
     m.Position = UDim2.new(1, h + 20, 1, s);
@@ -65,18 +62,18 @@ function Notify(TITLE, TEXT, DURATION)
 
     task.spawn(function()
         local u = tick();
-        while tick() - u < DURATION do;
+        while tick() - u < DURATION do
             local v = DURATION - (tick() - u);
             q.Text = "(" .. string.format("%.1f", v) .. ")";
             task.wait(0.1);
         end;
         local w = a:Create(m, TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
-            Position = UDim2.new(1, h + 20, m.Position.Y.Scale, m.Position.Y.Offset)
+            Position = UDim2.new(1, h + 20, m.Position.Y.Scale, m.Position.Y.Offset);
         })
         w:Play();
         w.Completed:Wait();
         for x, y in ipairs(e) do
-            if y == m then;
+            if y == m then
                 table.remove(e, x);
                 break;
             end;
@@ -86,9 +83,5 @@ function Notify(TITLE, TEXT, DURATION)
 end;
 
 return {
-    WNotify = Notify;
+    WaterNotify = Notify
 }
-
-
-
-
