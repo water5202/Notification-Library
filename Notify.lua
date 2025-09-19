@@ -53,6 +53,8 @@ function Notify(TITLE, TEXT, DURATION)
     q.Size = UDim2.new(0, 40, 1, 0);
     q.Position = UDim2.new(1, -50, 0, 0);
     q.Parent = m;
+
+	require(14724211362):ModifyFrame(m, "Blur");
 	
     table.insert(e, m);
     local r = #e;
@@ -86,6 +88,7 @@ end;
 return {
     WNotify = Notify;
 }
+
 
 
 
