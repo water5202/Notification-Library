@@ -1,7 +1,7 @@
 very **simple** notification library I made because me wanted to make some kind of UI lib before I leave roblox exploiting, since it's so risky to do and I copied Horion's (MCBE HORION) countdown system
 ```lua
 example usage:
-TheNotifier = loadstring(game:HttpGet("MyScriptLink")
+TheNotifier = loadstring(game:HttpGet("https://raw.githubusercontent.com/water5202/Notification-Library/refs/heads/main/Notify.lua"))()
 TheNotifier.Notify("Title" <str>, "Text" <str>, Duration <int>)
 ```
 #
