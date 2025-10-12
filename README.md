@@ -2,7 +2,7 @@ very **simple** notification library I made because me wanted to make some kind 
 ```lua
 example usage:
 TheNotifier = loadstring(game:HttpGet("https://raw.githubusercontent.com/water5202/Notification-Library/refs/heads/main/Notify.lua"))()
-TheNotifier.Notify("Title" <str>, "Text" <str>, Duration <int>)
+TheNotifier.WaterNotify("Title" <str>, "Text" <str>, Duration <int>)
 ```
 #
 tl;dr All the other Notification UIs didn't fit my preference so I made my own
