@@ -71,7 +71,6 @@ function Notify(TITLE, TEXT, DURATION)
             Position = UDim2.new(1, h + 20, m.Position.Y.Scale, m.Position.Y.Offset);
         })
         w:Play();
-        w.Completed:Wait();
         for x, y in ipairs(e) do
             if y == m then
                 table.remove(e, x);
@@ -85,3 +84,4 @@ end;
 return {
     WaterNotify = Notify
 }
+
