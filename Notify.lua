@@ -8,7 +8,7 @@ local f = 10
 local g = 80
 local h = 250
 
-local function updatePositions()
+local function updpos()
     for i, m in ipairs(e) do
         local s = -((g + f) * i)
         local t = {Position = UDim2.new(1, -10, 1, s)}
@@ -93,3 +93,4 @@ end
 return {
     WaterNotify = Notify
 }
+
