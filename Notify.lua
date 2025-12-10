@@ -6,7 +6,7 @@ d.Parent = game:GetService("CoreGui")
 local e = {}
 local f = 10
 local g = 80
-local h = 250
+local h = 120
 
 local function updpos()
     for i, m in ipairs(e) do
@@ -22,7 +22,7 @@ function Notify(TITLE, TEXT, DURATION)
     m.Size = UDim2.new(0, h, 0, g)
     m.AnchorPoint = Vector2.new(1, 1)
     m.Position = UDim2.new(1, h + 20, 1, -10)
-    m.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    m.BackgroundColor3 = Color3.fromRGB(64, 72, 66)
     m.BackgroundTransparency = 0.1
     m.Parent = d
 
@@ -93,4 +93,5 @@ end
 return {
     WaterNotify = Notify
 }
+
 
