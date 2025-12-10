@@ -6,7 +6,7 @@ d.Parent = game:GetService("CoreGui")
 local e = {}
 local f = 10
 local g = 80
-local h = 120
+local h = 180
 
 local function updpos()
     for i, m in ipairs(e) do
@@ -93,5 +93,6 @@ end
 return {
     WaterNotify = Notify
 }
+
 
 
