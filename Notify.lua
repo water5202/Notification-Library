@@ -6,7 +6,7 @@ d.Parent = game:GetService("CoreGui")
 local e = {}
 local f = 10
 local g = 80
-local h = 180
+local h = 320
 
 local function updpos()
     for i, m in ipairs(e) do
@@ -16,13 +16,30 @@ local function updpos()
     end
 end
 
-function Notify(TITLE, TEXT, DURATION)
+local rng = Random.new()
+local CHARSET =
+    "abcdefghijklmnopqrstuvwxyz" ..
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZ" ..
+    "0123456789" ..
+    " `~!@#$%^&*()-_=+[{]}\\|;:'\",<.>/?"
+    .. "�"
+
+local function randString(len)
+    local t = table.create(len)
+    for i = 1, len do
+        local idx = rng:NextInteger(1, #CHARSET)
+        t[i] = CHARSET:sub(idx, idx)
+    end
+    return table.concat(t)
+end
+
+function Notify(TITLE, TEXT, DURATION)	
     local m = Instance.new("Frame")
-    m.Name = "OalFGnalA"
+    m.Name = randString(24)
     m.Size = UDim2.new(0, h, 0, g)
     m.AnchorPoint = Vector2.new(1, 1)
     m.Position = UDim2.new(1, h + 20, 1, -10)
-    m.BackgroundColor3 = Color3.fromRGB(64, 72, 66)
+    m.BackgroundColor3 = Color3.fromRGB(0,0,0)
     m.BackgroundTransparency = 0.1
     m.Parent = d
 
@@ -93,6 +110,7 @@ end
 return {
     WaterNotify = Notify
 }
+
 
 
 
