@@ -39,7 +39,7 @@ function Notify(TITLE, TEXT, DURATION)
     m.AnchorPoint = Vector2.new(1, 1)
     m.Position = UDim2.new(1, h + 20, 1, -10)
     m.BackgroundColor3 = Color3.fromRGB(0,0,0)
-    m.BackgroundTransparency = 0.1
+    m.BackgroundTransparency = 0.5
     m.Parent = d
 
     local n = Instance.new("UICorner")
@@ -109,6 +109,7 @@ end
 return {
     WaterNotify = Notify
 }
+
 
 
 
